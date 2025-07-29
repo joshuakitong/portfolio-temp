@@ -1,6 +1,6 @@
 # Joshua Kitong Portfolio
 
-This is a responsive, single-page portfolio built with **React**, **Vite**, **Tailwind CSS**, and **anime.js**.
+This is a responsive, single-page portfolio built with **React**, **Vite**, **Tailwind CSS**, and **GSAP**.
 
 Live: [View Site](https://joshuakitong.github.io/portfolio-temp)
 
