@@ -6,3 +6,7 @@
 @theme {
   --font-cascadia: "Cascadia Code", "monospace"; 
 }
+
+body {
+  cursor: none;
+}
