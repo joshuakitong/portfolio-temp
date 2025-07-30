@@ -27,11 +27,11 @@ export default function CustomCursor() {
       });
 
       if (isMouseDown) {
-        cursor.style.backgroundColor = "#eab308"; // yellow-500
+        cursor.style.backgroundColor = "#EAB308"; // yellow-500
       } else if (hovering) {
-        cursor.style.backgroundColor = "#3b82f6"; // blue-500
+        cursor.style.backgroundColor = "#3B82F6"; // blue-500
       } else {
-        cursor.style.backgroundColor = "#ffffff"; // white
+        cursor.style.backgroundColor = "#FFFFFF"; // white
       }
     };
 
