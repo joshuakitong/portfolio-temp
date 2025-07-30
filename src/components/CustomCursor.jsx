@@ -114,10 +114,9 @@ export default function CustomCursor() {
       />
       <div
         ref={rgbRef}
-        className="fixed top-0 left-0 w-4 h-4 z-45 pointer-events-none rounded-full"
+        className="fixed top-0 left-0 w-4 h-4 z-45 pointer-events-none rounded-full mix-blend-screen"
         style={{
           boxShadow: "0 0 12px red, 0 0 24px green, 0 0 36px blue",
-          mixBlendMode: "screen",
           opacity: 1,
         }}
       />
