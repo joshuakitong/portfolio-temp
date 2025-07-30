@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export default function CustomCursor() {
+export default function MeSVGArt() {
   const circleRef = useRef(null);
   const lineRefs = useRef([]);
   const groupRef = useRef(null);
