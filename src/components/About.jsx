@@ -74,7 +74,7 @@ export default function AboutTimeline() {
         </h2>
         {timelineData.map((item, index) => (
           <div key={index} className="timeline-item mb-6 relative">
-            <div className="bg-white/5 border border-white/10 rounded-4xl p-6 backdrop-blur-md transition-shadow duration-500 hover:shadow-[0_0_16px_0px_rgba(59,130,246,0.15)]">
+            <div className="bg-white/5 border border-white/10 rounded-4xl p-6 backdrop-blur-md transition-shadow duration-500 hover:shadow-[0_0_16px_0px_rgba(59,130,246,0.1)]">
               <h3 className="text-lg font-semibold flex items-center gap-2 text-blue-500">
                 {item.title}
               </h3>
