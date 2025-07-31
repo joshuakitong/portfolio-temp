@@ -32,13 +32,22 @@ function App() {
           <MeSVGArt />
         </div>
       </div>
-      <div id="about" className="min-h-screen pt-16 px-6" >About</div>
-      <div id="skills" className="min-h-screen pt-16 px-6" >Skills</div>
-      <div id="projects" className="min-h-screen pt-16 px-6" >Projects</div>
-      <div id="others" className="min-h-screen pt-16 px-6" >Others</div>
-      <div id="contact" className="min-h-screen pt-16 px-6" >Contact</div>
+      <div id="about" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 sm:pt-0 px-6" >
+        <span className="text-center w-full">About</span>
+      </div>
+      <div id="skills" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 sm:pt-0 px-6" >
+        <span className="text-center w-full">Skills</span>
+      </div>
+      <div id="projects" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 sm:pt-0 px-6" >
+        <span className="text-center w-full">Projects</span>
+      </div>
+      <div id="others" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 sm:pt-0 px-6" >
+        <span className="text-center w-full">Others</span>
+      </div>
+      <div id="contact" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 sm:pt-0 px-6" >
+        <span className="text-center w-full">Contact</span>
+      </div>
     </div>
-
   );
 }
 
