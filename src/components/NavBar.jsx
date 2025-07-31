@@ -21,6 +21,8 @@ export default function NavBar() {
       { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
     );
 
+    const isSmallScreen = window.innerWidth < 768;
+
     tl.fromTo(
       linkRefs.current,
       { y: -20, opacity: 0 },
@@ -29,7 +31,7 @@ export default function NavBar() {
         opacity: 1,
         duration: 0.7,
         ease: "power2.out",
-        stagger: 0.1,
+        stagger: isSmallScreen ? 0 : 0.1,
       },
       "-=0.5"
     );

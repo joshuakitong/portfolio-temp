@@ -12,7 +12,7 @@ function App() {
       <StaticBackground />
       <CustomCursor />
 
-      <div id="home" className="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6">
+      <div id="home" className="relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 md:pt-0 px-6">
         <Home />
       </div>
       <div id="about" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6" >
