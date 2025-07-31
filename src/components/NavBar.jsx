@@ -10,6 +10,21 @@ export default function NavBar() {
   const linkRefs = useRef([]);
   const faviconRef = useRef(null);
   const underlineRef = useRef(null);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      navRef.current,
+      { y: -50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        delay: 2,
+        ease: "power3.in",
+      }
+    );
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,8 +82,9 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrolled || isOpen ? "bg-black bg-opacity-50 backdrop-blur-sm shadow-md" : ""
+      ref={navRef}
+      className={`w-full fixed top-0 z-50 transition-bg duration-300 opacity-0 ${
+        scrolled || isOpen ? "bg-black" : ""
       }`}
     >
       <div className="max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-between">
@@ -107,14 +123,13 @@ export default function NavBar() {
               {section}
             </a>
           ))}
-          {/* animated underline */}
-          {activeSection !== "home" && (
-            <div
-              ref={underlineRef}
-              className="absolute -bottom-5 h-[4px] bg-white transition-all duration-200"
-              style={{ width: 0, transform: "translateX(0)" }}
-            />
-          )}
+          {/* Animated Underline */}
+          <div
+            ref={underlineRef}
+            className={`absolute -bottom-5 h-[4px] bg-white transition-all duration-200 w-0 translate-x-0 ${
+              activeSection === "home" ? "opacity-0" : ""
+            }`}
+          />
         </div>
 
         {/* Hamburger Icon */}
