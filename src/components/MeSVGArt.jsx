@@ -30,8 +30,8 @@ export default function MeSVGArt() {
           x: 0,
           y: 0,
           opacity: 1,
-          duration: 0.7,
-          delay: index * 0.5,
+          duration: 0.5,
+          delay: index * 0.7,
           ease: "power2.out",
         }
       );
