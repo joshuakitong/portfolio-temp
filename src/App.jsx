@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar";
+import VignetteOverlay from "./components/VignetteOverlay";
 import StaticBackground from "./components/StaticBackground";
 import CustomCursor from "./components/CustomCursor";
 import Home from "./components/Home";
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="relative min-h-screen bg-black text-white font-cascadia">
       <NavBar />
+      <VignetteOverlay />
       <StaticBackground />
       <CustomCursor />
 
