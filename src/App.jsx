@@ -15,19 +15,19 @@ function App() {
       <div id="home" className="relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 md:pt-0 px-6">
         <Home />
       </div>
-      <div id="about" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6" >
+      <div id="about" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">About</span>
       </div>
-      <div id="skills" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6" >
+      <div id="skills" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Skills</span>
       </div>
-      <div id="projects" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6" >
+      <div id="projects" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Projects</span>
       </div>
-      <div id="others" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6" >
+      <div id="others" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Others</span>
       </div>
-      <div id="contact" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-16 sm:pt-0 px-6" >
+      <div id="contact" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Contact</span>
       </div>
     </div>
