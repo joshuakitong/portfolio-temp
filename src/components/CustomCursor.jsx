@@ -24,6 +24,14 @@ export default function CustomCursor() {
           y <= rect.bottom;
 
         if (isInside) hovering = true;
+
+        el.classList.forEach((cls) => {
+          if (cls.startsWith("cursor-")) {
+            el.classList.remove(cls);
+          }
+        });
+
+        el.classList.add("cursor-none");
       });
 
       if (isMouseDown) {
