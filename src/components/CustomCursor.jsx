@@ -6,6 +6,7 @@ export default function CustomCursor() {
   const rgbRef = useRef(null);
   const lastMouse = useRef({ x: 0, y: 0 });
   let isMouseDown = false;
+  let hasMoved = false;
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -44,6 +45,11 @@ export default function CustomCursor() {
     };
 
     const moveCursor = (e) => {
+      if (!hasMoved) {
+        hasMoved = true;
+        gsap.to([cursor, rgb], { opacity: 1, duration: 0.4, ease: "power2.out" });
+      }
+
       lastMouse.current = { x: e.clientX, y: e.clientY };
 
       gsap.to(cursor, {
@@ -114,7 +120,7 @@ export default function CustomCursor() {
     <>
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-4 h-4 z-50 pointer-events-none rounded-full mix-blend-difference"
+        className="fixed top-0 left-0 w-4 h-4 z-50 pointer-events-none rounded-full mix-blend-difference opacity-0 transition-opacity duration-300"
         style={{
           backgroundColor: "#ffffff",
           transform: "scale(1)",
@@ -122,10 +128,9 @@ export default function CustomCursor() {
       />
       <div
         ref={rgbRef}
-        className="fixed top-0 left-0 w-4 h-4 z-45 pointer-events-none rounded-full mix-blend-screen"
+        className="fixed top-0 left-0 w-4 h-4 z-45 pointer-events-none rounded-full mix-blend-screen opacity-0 transition-opacity duration-300"
         style={{
           boxShadow: "0 0 12px red, 0 0 24px green, 0 0 36px blue",
-          opacity: 1,
         }}
       />
     </>
