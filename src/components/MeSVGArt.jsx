@@ -64,8 +64,7 @@ export default function MeSVGArt() {
       gsap.to(circle, {
         scale: 1,
         duration: 0.5,
-        ease: "power1.out",
-        fill: "#FFFFFF"
+        ease: "power1.out"
       });
 
       lines.forEach((line, index) => {
