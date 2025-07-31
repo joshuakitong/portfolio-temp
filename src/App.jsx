@@ -3,6 +3,7 @@ import VignetteOverlay from "./components/VignetteOverlay";
 import StaticBackground from "./components/StaticBackground";
 import CustomCursor from "./components/CustomCursor";
 import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <div id="home" className="relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 md:pt-0 px-6">
         <Home />
       </div>
-      <div id="about" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
-        <span className="text-center w-full">About</span>
+      <div id="about" className="relative z-10 items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
+        <About />
       </div>
       <div id="skills" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Skills</span>
