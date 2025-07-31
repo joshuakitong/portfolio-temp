@@ -27,9 +27,6 @@ function App() {
       <div id="projects" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Projects</span>
       </div>
-      <div id="others" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
-        <span className="text-center w-full">Others</span>
-      </div>
       <div id="contact" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Contact</span>
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const sections = ["About", "Skills", "Projects", "Others", "Contact"];
+const sections = ["About", "Skills", "Projects", "Contact"];
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(window.scrollY > 10);
