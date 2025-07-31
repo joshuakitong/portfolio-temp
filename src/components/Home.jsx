@@ -14,7 +14,7 @@ export default function Hero() {
 
     tl.fromTo(titleRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "+=0.2");
 
-    tl.fromTo(paragraphRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "+=0.3");
+    tl.fromTo(paragraphRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "+=0.2");
 
     return () => {
       gsap.killTweensOf([helloRef.current, titleRef.current, paragraphRef.current]);

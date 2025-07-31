@@ -19,7 +19,7 @@ export default function NavBar() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.7,
+        duration: 1,
         delay: 2,
         ease: "power3.in",
       }
@@ -92,6 +92,7 @@ export default function NavBar() {
         <button
           ref={faviconRef}
           onClick={() => {
+            setIsOpen(false);
             const section = document.getElementById("home");
             if (section) {
               section.scrollIntoView();
