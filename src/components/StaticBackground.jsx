@@ -22,7 +22,7 @@ export default function StaticBackground() {
         imageData.data[i] = brightness;
         imageData.data[i + 1] = brightness;
         imageData.data[i + 2] = brightness;
-        imageData.data[i + 3] = 100 + Math.random() * 30;
+        imageData.data[i + 3] = 75 + Math.random() * 30;
       }
       ctx.putImageData(imageData, 0, 0);
 
