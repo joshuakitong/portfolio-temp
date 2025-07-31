@@ -29,7 +29,7 @@ export default function Hero() {
           Hello! I'm Joshua
         </h1>
 
-        <p ref={titleRef} className="text-xl md:text-2xl mt-4 text-blue-500 opacity-0">
+        <p ref={titleRef} className="text-xl md:text-2xl mt-4 text-blue-500 font-semibold opacity-0">
           Front-End Web Developer
         </p>
 
