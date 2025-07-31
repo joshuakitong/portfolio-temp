@@ -86,7 +86,7 @@ export default function NavBar() {
           onMouseEnter={(e) => gsap.to(e.currentTarget, { scale: 1.05, duration: 0.2 })}
           onMouseLeave={(e) => gsap.to(e.currentTarget, { scale: 1, duration: 0.2 })}
           onMouseDown={(e) => gsap.to(e.currentTarget, { scale: 0.95, duration: 0.1 })}
-          onMouseUp={(e) => gsap.to(e.currentTarget, { scale: 1, duration: 0.1 })}
+          onMouseUp={(e) => gsap.to(e.currentTarget, { scale: 1.05, duration: 0.1 })}
         >
           <img src="favicon.ico" alt="Logo" className="w-8 h-8" />
         </button>
@@ -102,7 +102,7 @@ export default function NavBar() {
               onMouseEnter={(e) => gsap.to(e.currentTarget, { scale: 1.05, duration: 0.2 })}
               onMouseLeave={(e) => gsap.to(e.currentTarget, { scale: 1, duration: 0.2 })}
               onMouseDown={(e) => gsap.to(e.currentTarget, { scale: 0.95, duration: 0.1 })}
-              onMouseUp={(e) => gsap.to(e.currentTarget, { scale: 1, duration: 0.1 })}
+              onMouseUp={(e) => gsap.to(e.currentTarget, { scale: 1.05, duration: 0.1 })}
             >
               {section}
             </a>
