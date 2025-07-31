@@ -10,11 +10,11 @@ export default function Hero() {
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-    tl.fromTo(helloRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "+=0.1");
+    tl.fromTo(helloRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 }, "+=0.1");
 
-    tl.fromTo(titleRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "+=0.2");
+    tl.fromTo(titleRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75 }, "+=0.2");
 
-    tl.fromTo(paragraphRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "+=0.2");
+    tl.fromTo(paragraphRef.current, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, "+=0.2");
 
     return () => {
       gsap.killTweensOf([helloRef.current, titleRef.current, paragraphRef.current]);

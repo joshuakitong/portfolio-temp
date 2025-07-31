@@ -13,16 +13,25 @@ export default function NavBar() {
   const navRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
+    const tl = gsap.timeline({ delay: 2 });
+
+    tl.fromTo(
       navRef.current,
       { y: -50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
+    );
+
+    tl.fromTo(
+      linkRefs.current,
+      { y: -20, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        duration: 1,
-        delay: 2,
-        ease: "power3.in",
-      }
+        duration: 0.7,
+        ease: "power2.out",
+        stagger: 0.1,
+      },
+      "-=0.5"
     );
   }, []);
 

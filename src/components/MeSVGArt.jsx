@@ -18,7 +18,7 @@ export default function MeSVGArt() {
     const group = groupRef.current;
 
     const directions = [
-      { x: -250, opacity: 0 },
+      { y: 250, opacity: 0 },
       { opacity: 0 },
       { y: 25, opacity: 0 },
       { x: 50, opacity: 0 },
