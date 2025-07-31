@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import VignetteOverlay from "./components/VignetteOverlay";
 import StaticBackground from "./components/StaticBackground";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToHash from "./components/ScrollToHash";
 import Home from "./components/Home";
 import About from "./components/About";
 
@@ -12,6 +13,7 @@ function App() {
       <VignetteOverlay />
       <StaticBackground />
       <CustomCursor />
+      <ScrollToHash />
 
       <div id="home" className="relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-20 md:pt-0 px-6">
         <Home />
