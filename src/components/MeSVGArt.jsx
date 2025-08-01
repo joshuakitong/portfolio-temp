@@ -17,6 +17,8 @@ export default function MeSVGArt() {
     const light = lightRef.current;
     const group = groupRef.current;
 
+    gsap.set(light, { opacity: 0 });
+
     const directions = [
       { y: -250, opacity: 0 },
       { opacity: 0 },
