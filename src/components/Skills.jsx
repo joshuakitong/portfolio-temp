@@ -116,7 +116,7 @@ export default function SkillsSection() {
     <>
       <h2
         ref={titleRef}
-        className="text-3xl mb-8 text-center font-bold text-white"
+        className="text-3xl sm:text-4xl mb-8 text-center font-bold text-white"
       >
         Skills
       </h2>
