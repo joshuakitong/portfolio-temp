@@ -3,14 +3,12 @@ import gsap from "gsap";
 
 export default function CustomCursor() {
   const cursorRef = useRef(null);
-  const rgbRef = useRef(null);
   const lastMouse = useRef({ x: 0, y: 0 });
   let isMouseDown = false;
   let hasMoved = false;
 
   useEffect(() => {
     const cursor = cursorRef.current;
-    const rgb = rgbRef.current;
 
     const updateColor = ({ x, y }) => {
       const elements = document.querySelectorAll("a, button, .hover-target");
@@ -40,14 +38,14 @@ export default function CustomCursor() {
       } else if (hovering) {
         cursor.style.backgroundColor = "#3B82F6"; // blue-500
       } else {
-        cursor.style.backgroundColor = "#FFFFFF"; // white
+        cursor.style.backgroundColor = "#FFFFFF";
       }
     };
 
     const moveCursor = (e) => {
       if (!hasMoved) {
         hasMoved = true;
-        gsap.to([cursor, rgb], { opacity: 1, duration: 0.4, ease: "power2.out" });
+        gsap.to(cursor, { opacity: 1, duration: 0.4, ease: "power2.out" });
       }
 
       lastMouse.current = { x: e.clientX, y: e.clientY };
@@ -59,49 +57,26 @@ export default function CustomCursor() {
         ease: "power2.out",
       });
 
-      gsap.to(rgb, {
-        x: e.clientX - 8,
-        y: e.clientY - 8,
-        duration: 0.15,
-        ease: "power2.out",
-      });
-
       updateColor({ x: e.clientX, y: e.clientY });
     };
 
     const handleMouseDown = () => {
       isMouseDown = true;
-
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         scale: 1.25,
         duration: 0.1,
         ease: "power2.out",
       });
-
-      gsap.to(rgbRef.current, {
-        scale: 1.25,
-        duration: 0.2,
-        ease: "power2.out",
-      });
-
       updateColor(lastMouse.current);
     };
 
     const handleMouseUp = () => {
       isMouseDown = false;
-
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         scale: 1,
         duration: 0.15,
         ease: "power2.out",
       });
-
-      gsap.to(rgbRef.current, {
-        scale: 1,
-        duration: 0.2,
-        ease: "power2.out",
-      });
-
       updateColor(lastMouse.current);
     };
 
@@ -117,22 +92,14 @@ export default function CustomCursor() {
   }, []);
 
   return (
-    <>
-      <div
-        ref={cursorRef}
-        className="fixed top-0 left-0 w-4 h-4 z-50 pointer-events-none rounded-full mix-blend-difference opacity-0 transition-opacity duration-300"
-        style={{
-          backgroundColor: "#ffffff",
-          transform: "scale(1)",
-        }}
-      />
-      <div
-        ref={rgbRef}
-        className="fixed top-0 left-0 w-4 h-4 z-45 pointer-events-none rounded-full mix-blend-screen opacity-0 transition-opacity duration-300"
-        style={{
-          boxShadow: "0 0 12px red, 0 0 24px green, 0 0 36px blue",
-        }}
-      />
-    </>
+    <div
+      ref={cursorRef}
+      className="fixed top-0 left-0 w-4 h-4 z-50 pointer-events-none rounded-full mix-blend-difference opacity-0"
+      style={{
+        backgroundColor: "#fff",
+        boxShadow: "0 0 12px red, 0 0 24px green, 0 0 36px blue",
+        transform: "scale(1)",
+      }}
+    />
   );
 }
