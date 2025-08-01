@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const paragraph = `I'm a front-end web developer with a degree in Information Technology, majoring in Software Development, and over three years of professional experience building web-based systems for U.S. utility cooperatives where my primary tech stack included ASP.NET (C#), AngularJS, HTML, CSS, and Kendo UI, along with additional exposure to Angular and PL/SQL. I also trained new hires, led code reviews for the Philippines team, and gained experience in facilitating daily stand-ups and presenting during sprint reviews.\n
 
-I took a few years to pursue creative careers in music production and gaming content creation. During this time, I strengthened my skills in problem-solving, critical thinking, adaptability, communication, and management, while also developing a deeper creative perspective and a stronger understanding of user experience and engagement.\n
+I took a few years to pursue creative careers in music production and gaming content creation. During this time, I strengthened my skills in problem solving, critical thinking, adaptability, communication, and management, while also developing a deeper creative perspective and a stronger understanding of user experience and engagement.\n
 
 Now, I'm back in tech, building modern web applications primarily using React, Next.js, Vue.js, Nuxt.js, Node.js, Firebase, and more, combining technical expertise with creative insight.`;
 
@@ -64,7 +64,7 @@ export default function AboutTimeline() {
       paragraphRef.current.innerHTML = parts
         .map((part, index) => {
           const isLast = index === parts.length - 1;
-          return `<p class="${isLast ? "" : "mb-2"}">${part}</p>`;
+          return `<p class="${isLast ? "" : "mb-4"}">${part}</p>`;
         })
         .join("");
 
