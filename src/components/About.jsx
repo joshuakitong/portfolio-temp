@@ -91,7 +91,7 @@ export default function AboutTimeline() {
   }, []);
 
   return (
-    <div className="max-w-2xl mx-auto relative">
+    <div className="max-w-4xl mx-auto relative">
       <h2
         ref={titleRef}
         className="text-3xl mb-8 text-center font-bold text-white"
@@ -102,7 +102,7 @@ export default function AboutTimeline() {
         <div className="bg-white/5 border border-white/10 rounded-4xl p-6 opacity-0" ref={containerRef}>
           <p
             ref={paragraphRef}
-            className="text-sm sm:text-md text-gray-200 whitespace-pre-wrap opacity-0"
+            className="text-sm sm:text-lg text-gray-200 whitespace-pre-wrap opacity-0"
           >
             {paragraph}
           </p>
