@@ -5,6 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 import ScrollToHash from "./components/ScrollToHash";
 import Home from "./components/Home";
 import About from "./components/About";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
       <div id="about" className="relative z-10 items-center justify-between min-h-screen/2 max-w-4xl mx-auto pt-24 px-6" >
         <About />
       </div>
-      <div id="skills" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
-        <span className="text-center w-full">Skills</span>
+      <div id="skills" className="relative z-10 items-center justify-between min-h-screen/2 max-w-[1600px] mx-auto pt-24 px-6" >
+        <Skills />
       </div>
       <div id="projects" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
         <span className="text-center w-full">Projects</span>
