@@ -91,7 +91,7 @@ export default function AboutTimeline() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto relative">
+    <>
       <h2
         ref={titleRef}
         className="text-3xl mb-8 text-center font-bold text-white"
@@ -108,6 +108,6 @@ export default function AboutTimeline() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
