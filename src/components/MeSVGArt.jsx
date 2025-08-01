@@ -131,7 +131,7 @@ export default function MeSVGArt() {
     };
 
     const scheduleNextBlink = () => {
-      const delay = Math.random() * 5000 + 2000;
+      const delay = Math.random() * 5000 + 3000;
       blinkTimeout = setTimeout(blink, delay);
     };
 
