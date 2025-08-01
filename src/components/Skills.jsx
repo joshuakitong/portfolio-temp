@@ -30,6 +30,12 @@ const skills = [
       "GitHub Pages", "Render", "Firebase Hosting", "Vercel"
     ],
   },
+  {
+    category: "Soft Skills",
+    items: [
+      "Problem Solving", "Critical Thinking", "Attention to Detail", "Adaptability", "Communication", "Management", "Creativity"
+    ],
+  },
 ];
 
 export default function SkillsSection() {
