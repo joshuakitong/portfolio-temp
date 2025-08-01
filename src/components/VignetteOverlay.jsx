@@ -17,11 +17,11 @@ export default function VignetteOverlay() {
 
       timeoutRef.current = setTimeout(() => {
         gsap.to([leftRef.current, rightRef.current], {
-          opacity: 0.35,
+          opacity: 0.25,
           duration: 1,
           ease: "power2.inOut",
         });
-      }, 1000);
+      }, 500);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -36,12 +36,12 @@ export default function VignetteOverlay() {
       <div
         ref={leftRef}
         className="absolute -top-12 -left-22 sm:-left-18 w-8 h-[110%] bg-blue-500 blur-2xl"
-        style={{ opacity: 0.35 }}
+        style={{ opacity: 0.25 }}
       />
       <div
         ref={rightRef}
         className="absolute -top-12 -right-22 sm:-right-18 w-8 h-[110%] bg-blue-500 blur-2xl"
-        style={{ opacity: 0.35 }}
+        style={{ opacity: 0.25 }}
       />
     </div>
   );
