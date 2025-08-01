@@ -50,7 +50,7 @@ export default function AboutTimeline() {
     );
 
     gsap.to(containerRef.current, {
-      boxShadow: "0 0 16px rgba(59,130,246,0.25)",
+      boxShadow: "0 0 16px rgba(59,130,246,0.15)",
       repeat: -1,
       yoyo: true,
       duration: 4,
