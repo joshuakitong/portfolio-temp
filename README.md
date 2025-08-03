@@ -8,7 +8,7 @@ Live: [View Site](https://joshuakitong.github.io/portfolio-temp)
   <summary><strong>How to Run Locally</strong></summary>
 
   1. Clone the repo
-     `https://github.com/joshuakitong/habitrack`
+     `https://github.com/joshuakitong/portfolio-temp`
 
   2. Install dependencies
      `npm install`
