@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import MeSVGArt from "./MeSVGArt";
+import MeSVGArt from "../MeSVGArt";
 
 export default function Hero() {
   const helloRef = useRef(null);

@@ -3,11 +3,11 @@ import VignetteOverlay from "./components/VignetteOverlay";
 import StaticBackground from "./components/StaticBackground";
 import CustomCursor from "./components/CustomCursor";
 import ScrollToHash from "./components/ScrollToHash";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Home from "./components/sections/Home";
+import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 function App() {
   return (
