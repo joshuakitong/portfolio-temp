@@ -123,14 +123,14 @@ export default function SkillsSection() {
       <div ref={containerRef} className="space-y-12">
         {skills.map((section, index) => (
           <div key={index}>
-            <h3 className="skill-title opacity-0 text-blue-500 text-xl font-semibold mb-4">
+            <h3 className="skill-title opacity-0 text-blue-500 text-lg sm:text-xl font-semibold mb-4">
               {section.category}
             </h3>
             <div className="flex flex-wrap gap-3">
               {section.items.map((skill, i) => (
                 <div
                   key={i}
-                  className="skill-item opacity-0 text-gray-200 bg-white/5 border border-white/10 rounded-full px-4 py-2 transition-shadow duration-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)]"
+                  className="skill-item opacity-0 text-gray-200 text-sm sm:text-md bg-white/5 border border-white/10 rounded-full px-4 py-2 transition-shadow duration-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)]"
                 >
                   {skill}
                 </div>
