@@ -97,7 +97,7 @@ export default function CustomCursor() {
       className="fixed top-0 left-0 w-4 h-4 z-50 pointer-events-none rounded-full mix-blend-difference opacity-0"
       style={{
         backgroundColor: "#fff",
-        boxShadow: "0 0 12px red, 0 0 24px green, 0 0 36px blue",
+        boxShadow: "0 0 12px rgba(59,130,246,1), 0 0 48px rgba(59,130,246,0.15)",
         transform: "scale(1)",
       }}
     />
