@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -29,9 +30,10 @@ function App() {
       <div id="projects" className="relative z-10 items-center justify-between min-h-screen max-w-4xl mx-auto pt-24 px-6">
         <Projects />
       </div>
-      <div id="contact" className="relative z-10 flex items-center justify-between min-h-screen max-w-[1600px] mx-auto pt-24 px-6" >
-        <span className="text-center w-full">Contact</span>
+      <div id="contact" className="relative z-10 items-center justify-between min-h-screen/2 max-w-md mx-auto pt-24 px-6" >
+        <Contact />
       </div>
+      <footer className="text-sm text-white/50 text-center pt-24 pb-6">&copy; Joshua Kitong 2025. All Rights Reserved</footer>
     </div>
   );
 }
