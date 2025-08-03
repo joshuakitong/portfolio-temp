@@ -11,7 +11,7 @@ const projects = [
     title: "WorkoutGPT",
     description:
       "An AI-powered workout generator that features a multi-step form wizard for personalized workout generation, dynamic session regeneration, CRUD functionalities, user authentication, and data persistence.",
-    tech: ["Nuxt.js", "Tailwind", "GSAP", "Pinia", "Node.js", "Gemini API", "Firebase"],
+    tech: ["Nuxt.js", "Tailwind CSS", "GSAP", "Pinia", "Node.js", "Gemini API", "Firebase"],
     link: "https://workoutgpt-2d445.web.app/",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     title: "CryptoGuessr",
     description:
       "A cryptocurrency-themed web app that features three interactive mini-games that challenge users on their crypto knowledge through trivia, guessing games, and market data, with user authentication, and data persistence.",
-    tech: ["Next.js", "Tailwind", "Node.js", "CoinGecko API", "Firebase", "Vercel"],
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "CoinGecko API", "Firebase", "Vercel"],
     link: "https://cryptoguessr-amber.vercel.app/",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     title: "HabiTrack",
     description:
       "A habit tracker app that offers full CRUD functionality, enabling users to track their habit progress with user authentication, and data persistence.",
-    tech: ["React", "Tailwind", "Vite", "Firebase"],
+    tech: ["React", "Tailwind CSS", "Vite", "Firebase"],
     link: "https://habitrack-afeb2.web.app/",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "Portfolio (Diverse)",
     description:
       "A responsive, single-page portfolio that showcases my diverse background and skills across technical and creative fields.",
-    tech: ["React", "Tailwind", "CRA", "Framer Motion", "Github Pages"],
+    tech: ["React", "Tailwind CSS", "CRA", "Framer Motion", "Github Pages"],
     link: "https://joshuakitong.github.io/portfolio-webdev-music-gaming/",
   },
 ];
@@ -184,12 +184,12 @@ export default function ProjectsSection() {
             className="rounded-xl w-full mx-auto mb-6 border border-white/10"
           />
 
-          <div className="flex justify-end hover-target">
+          <div className="flex justify-end">
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-500 border border-blue-500 rounded-full px-4 py-2 text-sm hover:bg-blue-500 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-blue-500 border border-blue-500 rounded-full px-4 py-2 text-sm hover:bg-blue-500 hover:text-white transition-colors hover-target"
             >
               <ExternalLink size={16} />
               Visit Site
