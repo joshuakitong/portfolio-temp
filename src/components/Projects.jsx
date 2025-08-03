@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ExternalLink } from "lucide-react"; // Ensure this is installed via lucide-react
+import SplitType from "split-type";
+import { ExternalLink } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,11 +43,11 @@ const projects = [
 
 export default function ProjectsSection() {
   const containerRef = useRef([]);
-  const sectionTitleRef = useRef(null);
+  const titleRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
-      sectionTitleRef.current,
+      titleRef.current,
       { opacity: 0, y: 30 },
       {
         opacity: 1,
@@ -54,14 +55,14 @@ export default function ProjectsSection() {
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: sectionTitleRef.current,
+          trigger: titleRef.current,
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
       }
     );
 
-    containerRef.current.forEach((el, i) => {
+    containerRef.current.forEach((el) => {
       const title = el.querySelector(".project-title");
       const description = el.querySelector(".project-description");
       const techItems = el.querySelectorAll(".project-tech");
@@ -82,12 +83,19 @@ export default function ProjectsSection() {
         }
       );
 
+    gsap.to(containerRef.current, {
+      boxShadow: "0 0 16px rgba(59,130,246,0.15)",
+      repeat: -1,
+      yoyo: true,
+      duration: 4,
+      ease: "power2.inOut",
+    });
+
       gsap.fromTo(
         title,
-        { opacity: 0, y: 20 },
+        { opacity: 0 },
         {
           opacity: 1,
-          y: 0,
           duration: 0.6,
           delay: 0.2,
           ease: "power2.out",
@@ -99,22 +107,25 @@ export default function ProjectsSection() {
         }
       );
 
-      gsap.fromTo(
-        description,
-        { opacity: 0, y: 10 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          delay: 0.4,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
+      const split = new SplitType(description, {
+        types: "words",
+        tagName: "span",
+      });
+
+      gsap.set(description, { opacity: 1 });
+
+      gsap.from(split.words, {
+        opacity: 0,
+        y: 10,
+        stagger: 0.02,
+        duration: 0.4,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      });
 
       gsap.fromTo(
         techItems,
@@ -139,7 +150,7 @@ export default function ProjectsSection() {
   return (
     <div>
       <h2
-        ref={sectionTitleRef}
+        ref={titleRef}
         className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center"
       >
         Projects
