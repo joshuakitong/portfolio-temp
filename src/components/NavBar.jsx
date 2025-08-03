@@ -46,8 +46,8 @@ export default function NavBar() {
         opacity: 1,
         stagger: 0.2,
         duration: 0.7,
-        ease: "power3.out",
-        delay: 2.5,
+        ease: "power2.out",
+        delay: 2.75,
       }
     );
   }, []);
@@ -102,6 +102,28 @@ export default function NavBar() {
         x,
         width,
         duration: 0,
+      });
+    }
+
+    if (activeSection === "contact") {
+      const reversed = [...socialsRefs.current].reverse();
+
+      gsap.to(reversed, {
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        duration: 0.7,
+        ease: "power2.out",
+        pointerEvents: "none",
+      });
+    } else {
+      gsap.to(socialsRefs.current, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.5,
+        ease: "power2.out",
+        pointerEvents: "auto",
       });
     }
   }, [activeSection]);
@@ -206,35 +228,36 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
+      {/* Socials */}
       <div className="fixed bottom-3 left-3 lg:bottom-5 lg:left-5 z-40 flex flex-col gap-2 sm:gap-3">
-          <a
-            ref={(el) => (socialsRefs.current[2] = el)}
-            href="mailto:joshuakitong@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs"
-          >
-            <Mail size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
-          </a>
-          <a
-            ref={(el) => (socialsRefs.current[1] = el)}
-            href="https://github.com/joshuakitong"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs"
-          >
-            <Github size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
-          </a>
-          <a
-            ref={(el) => (socialsRefs.current[0] = el)}
-            href="https://www.linkedin.com/in/joshua-christopher-kitong-65805a2a9/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs"
-          >
-            <Linkedin size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
-          </a>
-        </div>
-      </>
+        <a
+          ref={(el) => (socialsRefs.current[2] = el)}
+          href="mailto:joshuakitong@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs opacity-0"
+        >
+          <Mail size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
+        </a>
+        <a
+          ref={(el) => (socialsRefs.current[1] = el)}
+          href="https://github.com/joshuakitong"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs opacity-0"
+        >
+          <Github size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
+        </a>
+        <a
+          ref={(el) => (socialsRefs.current[0] = el)}
+          href="https://www.linkedin.com/in/joshua-christopher-kitong-65805a2a9/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs opacity-0"
+        >
+          <Linkedin size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
+        </a>
+      </div>
+    </>
   );
 }
