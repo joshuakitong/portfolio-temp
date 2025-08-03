@@ -22,7 +22,7 @@ export default function Contact({ onVisibleChange }) {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       }
     );
@@ -41,9 +41,9 @@ export default function Contact({ onVisibleChange }) {
       duration: 0.4,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: paragraphRef.current,
+        trigger: sectionRef.current,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
 
@@ -58,9 +58,9 @@ export default function Contact({ onVisibleChange }) {
           ease: "power2.out",
           delay: 1 + i * 0.2,
           scrollTrigger: {
-            trigger: textRefs.current,
+            trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         }
       );
@@ -77,9 +77,9 @@ export default function Contact({ onVisibleChange }) {
           ease: "power2.out",
           delay: 1.5 + i * 0.2,
           scrollTrigger: {
-            trigger: buttonRefs.current,
+            trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         }
       );
@@ -115,10 +115,7 @@ export default function Contact({ onVisibleChange }) {
         </p>
 
         <p ref={(el) => (textRefs.current[0] = el)}>
-          Email: 
-          <a href="mailto:joshuakitong@gmail.com" className="text-blue-500 hover:underline">
-            joshuakitong@gmail.com
-          </a>
+          Email: <a href="mailto:joshuakitong@gmail.com" className="text-blue-500 hover:underline">joshuakitong@gmail.com</a>
         </p>
         <p ref={(el) => (textRefs.current[1] = el)}>Phone: (+63) 905-737-9500</p>
         <p ref={(el) => (textRefs.current[2] = el)}>Location: Baguio City, Philippines</p>

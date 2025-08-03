@@ -26,7 +26,7 @@ export default function AboutTimeline() {
         scrollTrigger: {
           trigger: titleRef.current,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       }
     );
@@ -42,7 +42,7 @@ export default function AboutTimeline() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       }
     );
@@ -82,7 +82,7 @@ export default function AboutTimeline() {
         scrollTrigger: {
           trigger: paragraphRef.current,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
     });
