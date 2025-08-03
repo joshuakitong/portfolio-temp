@@ -130,7 +130,7 @@ export default function SkillsSection() {
               {section.items.map((skill, i) => (
                 <div
                   key={i}
-                  className="skill-item opacity-0 text-gray-200 text-sm sm:text-md bg-white/5 border border-white/10 rounded-full px-4 py-2 transition-shadow duration-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)]"
+                  className="skill-item opacity-0 text-gray-200 text-sm sm:text-md bg-white/5 border border-white/10 rounded-full px-4 py-2 transition-shadow duration-300 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)]"
                 >
                   {skill}
                 </div>
