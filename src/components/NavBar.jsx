@@ -206,33 +206,33 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-      <div className="fixed bottom-6 left-6 z-40 flex flex-col gap-3">
+      <div className="fixed bottom-3 left-3 lg:bottom-5 lg:left-5 z-40 flex flex-col gap-2 sm:gap-3">
           <a
             ref={(el) => (socialsRefs.current[2] = el)}
             href="mailto:joshuakitong@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-sm"
+            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-xs"
           >
-            <Mail size={18} />
+            <Mail size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
           </a>
           <a
             ref={(el) => (socialsRefs.current[1] = el)}
             href="https://github.com/joshuakitong"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-sm"
+            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-xs"
           >
-            <Github size={18} />
+            <Github size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
           </a>
           <a
             ref={(el) => (socialsRefs.current[0] = el)}
             href="https://www.linkedin.com/in/joshua-christopher-kitong-65805a2a9/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-sm"
+            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-xs"
           >
-            <Linkedin size={18} />
+            <Linkedin size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
           </a>
         </div>
       </>
