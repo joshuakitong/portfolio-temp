@@ -56,7 +56,7 @@ export default function NavBar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
 
-      const scrollPos = window.scrollY + window.innerHeight / 3;
+      const scrollPos = window.scrollY + window.innerHeight / 2;
 
       const homeSection = document.getElementById("home");
       const homeRect = homeSection?.getBoundingClientRect();
@@ -154,7 +154,7 @@ export default function NavBar() {
             {/* Animated Underline */}
             <div
               ref={underlineRef}
-              className={`absolute -bottom-5 h-[4px] bg-white transition-all duration-200 w-0 translate-x-0 ${
+              className={`absolute -bottom-5 h-[4px] bg-white transition-all duration-300 w-0 translate-x-0 ${
                 activeSection === "home" ? "opacity-0" : ""
               }`}
             />
@@ -212,7 +212,7 @@ export default function NavBar() {
             href="mailto:joshuakitong@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-xs"
+            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs"
           >
             <Mail size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
           </a>
@@ -221,7 +221,7 @@ export default function NavBar() {
             href="https://github.com/joshuakitong"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-xs"
+            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs"
           >
             <Github size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
           </a>
@@ -230,7 +230,7 @@ export default function NavBar() {
             href="https://www.linkedin.com/in/joshua-christopher-kitong-65805a2a9/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors duration-300 backdrop-blur-xs"
+            className="bg-white/5 border border-white/10 text-white hover:bg-blue-500 hover:shadow-[0_0_8px_0_rgba(59,130,246,0.15)] rounded-full p-3 transition-colors transition-shadow duration-300 backdrop-blur-xs"
           >
             <Linkedin size="100%" className="w-3 h-3 sm:w-5 sm:h-5" />
           </a>
